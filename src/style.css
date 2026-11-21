@@ -1,0 +1,120 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, sans-serif;
+  color: #f2f6ff;
+  background: #1a1a2e;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+#game {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+#game-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#hud, #objective, #controls, #error {
+  position: absolute;
+  margin: 0;
+  border: 1px solid #a3b9e842;
+  background: #101725ed;
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 8px 24px #0a102445;
+}
+
+#hud {
+  top: 16px;
+  left: 16px;
+  width: 176px;
+  pointer-events: none;
+}
+
+h1 { font-size: 1rem; margin: 0 0 12px; }
+
+.health-label, #position, #controls {
+  color: #bfceea;
+  font-size: 0.8rem;
+}
+
+#position {
+  margin: 6px 0 0;
+  font-variant-numeric: tabular-nums;
+}
+
+progress {
+  display: block;
+  width: 100%;
+  height: 6px;
+  margin-top: 5px;
+  border: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #25314a;
+}
+
+progress::-webkit-progress-bar { background: #25314a; }
+progress::-webkit-progress-value { background: #78c6ff; }
+progress::-moz-progress-bar { background: #78c6ff; }
+
+#objective {
+  top: 16px;
+  right: 16px;
+  font-size: 0.85rem;
+}
+
+#objective p { margin: 0; }
+
+button {
+  margin-top: 8px;
+  border: 0;
+  border-radius: 6px;
+  padding: 6px 10px;
+  color: #101725;
+  background: #ffcd83;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:focus-visible { outline: 2px solid white; outline-offset: 3px; }
+
+#controls {
+  bottom: 16px;
+  left: 50%;
+  max-width: calc(100% - 32px);
+  width: max-content;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 1.8;
+  pointer-events: none;
+}
+
+#controls span { margin: 0 4px; }
+
+kbd {
+  padding: 1px 4px;
+  border: 1px solid #53617b;
+  border-radius: 4px;
+  color: #f2f6ff;
+}
+
+#error {
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  width: min(420px, calc(100% - 32px));
+}
+
+@media (max-width: 360px) {
+  #hud { width: 138px; left: 10px; }
+  #objective { right: 10px; }
+}

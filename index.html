@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1a1a2e" />
+    <link rel="icon" href="data:," />
+    <title>NewSwoodV2</title>
+  </head>
+  <body>
+    <main id="game" aria-label="NewSwoodV2">
+      <canvas id="game-canvas" aria-label="Bản đồ 3D"></canvas>
+      <section id="hud" aria-label="Trạng thái nhân vật">
+        <h1>NewSwoodV2</h1>
+        <div class="health-label"><span id="health-text">HP 100/100</span></div>
+        <progress id="health-bar" aria-label="Máu" max="100" value="100"></progress>
+        <p id="position">X 0.0 · Z 0.0</p>
+      </section>
+      <aside id="objective" aria-label="Mục tiêu">
+        <p id="mob-count" role="status"></p>
+        <button id="restart" type="button" hidden>Chơi lại</button>
+      </aside>
+      <p id="controls"><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> Di chuyển <span>·</span> <kbd>Space</kbd> Tấn công</p>
+      <p id="error" role="alert" hidden></p>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
