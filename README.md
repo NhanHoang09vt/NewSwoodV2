@@ -6,6 +6,19 @@
 
 NewSwoodV2 is a unified, high-performance Web MMORPG framework combining real-time 3D client rendering (Three.js / WebGL / Next.js) and an authoritative multiplayer backend engine, integrated with AI-driven game studio workflows, asset pipelines, and development agent skills.
 
+## Chạy prototype 3D
+
+Cần Node.js 20.19+ hoặc 22.12+ và trình duyệt hỗ trợ WebGL 2. Chạy tại thư mục gốc:
+
+```sh
+npm ci
+npm run dev
+```
+
+Mở địa chỉ Vite in ra. Dùng **WASD** để di chuyển và nhấn **Space** để đánh quái trong phạm vi cận chiến. Hạ hết ba quái để mở nút **Chơi lại**. Nhân vật xanh lá nhận vị trí từ một bộ mô phỏng mạng chạy ngay trong trình duyệt.
+
+Dùng `npm run build` để kiểm tra TypeScript và tạo bản build trong `dist/`.
+
 ## 📂 Documentation
 
 Detailed architecture specifications, research, workflows, and task roadmaps are available in the [`docs/`](./docs) directory:

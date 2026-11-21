@@ -8,7 +8,7 @@
 - Không được: Dùng CDN link trực tiếp cho Three.js hoặc để `tsconfig.json` tắt `strict` mode.
 - Kiểm chứng: Chạy `npm install && npm run build` thành công với 0 lỗi TypeScript.
 - Sau: T2
-- [ ] Xong
+- [x] Xong
 
 ## T2 [BLOCKER] Tạo lõi vòng lặp game (GameLoop) và quản lý tài nguyên (Dispose)
 - File: `src/core/Engine.ts`
@@ -20,7 +20,7 @@
 - Không được: Hardcode kích thước canvas cố định (phải lắng nghe `window.resize`) hoặc không kẹp trần `deltaTime`.
 - Kiểm chứng: Mở trình duyệt thấy màn hình nền màu xanh tối (`0x1a1a2e`), thu phóng cửa sổ trình duyệt thì khung hình tự co giãn không méo tỷ lệ.
 - Sau: T3, T4
-- [ ] Xong
+- [x] Xong
 
 ## T3 [BLOCKER] Xây dựng hệ thống Input và điều khiển nhân vật cục bộ (LocalPlayer)
 - File: `src/entities/Player.ts`, `src/core/InputManager.ts`
@@ -32,7 +32,7 @@
 - Không được: Đặt logic đọc sự kiện `keydown` trực tiếp bên trong `Player.update()`.
 - Kiểm chứng: Nhấn WASD nhân vật di chuyển mượt theo 8 hướng với tốc độ đồng nhất 6 đơn vị/giây.
 - Sau: T5
-- [ ] Xong
+- [x] Xong
 
 ## T4 [BLOCKER] Tạo mặt đất lưới (Terrain Grid) và Camera góc nhìn thứ 3 bám theo nhân vật
 - File: `src/world/WorldMap.ts`, `src/core/FollowCamera.ts`
@@ -44,7 +44,7 @@
 - Không được: Đặt camera làm con trực tiếp (`player.add(camera)`) vì camera sẽ bị xoay lắc theo hướng nhân vật.
 - Kiểm chứng: Di chuyển nhân vật ra mép lưới, camera trượt theo mượt mà và luôn giữ nhân vật ở tâm màn hình.
 - Sau: T5
-- [ ] Xong
+- [x] Xong
 
 ## T5 [MAJOR] Tạo thực thể Quái vật (Mob) và hệ thống va chạm/tấn công cận chiến cơ bản
 - File: `src/entities/Mob.ts`, `src/systems/CombatSystem.ts`
@@ -56,7 +56,7 @@
 - Không được: Xóa phần tử khỏi mảng `mobs` bằng `splice` ngay trong vòng lặp `for...of` đang duyệt chính mảng đó.
 - Kiểm chứng: Đứng cách quái dưới 2.5m và bấm phím `Space` 3 lần, quái mất 100 HP và biến mất khỏi scene.
 - Sau: T6
-- [ ] Xong
+- [x] Xong
 
 ## T6 [MAJOR] Tạo lớp trừu tượng mạng (NetworkAdapter) chuẩn bị cho đồng bộ MMORPG
 - File: `src/network/NetworkAdapter.ts`
@@ -68,7 +68,7 @@
 - Không được: Đưa trực tiếp `THREE.Vector3` hay object của Three.js vào gói tin mạng (`PlayerStatePacket`).
 - Kiểm chứng: Chạy game thấy xuất hiện thêm 1 nhân vật màu xanh lá tự động chạy vòng tròn mượt mà trên bản đồ.
 - Sau: T7
-- [ ] Xong
+- [x] Xong
 
 ## T7 [MINOR] Hiển thị HUD tối giản (Thanh máu & Tọa độ) bằng HTML/CSS Overlay
 - File: `src/ui/HudOverlay.ts`, `index.html`
@@ -79,7 +79,7 @@
 - Không được: Dùng `innerHTML` liên tục trong vòng lặp `requestAnimationFrame` hoặc tạo text 3D nặng nề cho HUD cơ bản.
 - Kiểm chứng: Góc trái trên hiển thị `HP: 100/100` và tọa độ `X, Z` cập nhật chính xác khi nhân vật bước đi.
 - Sau: Không
-- [ ] Xong
+- [x] Xong
 
 ## Định hướng tiếp theo
 1. B
